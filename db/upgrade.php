@@ -1231,7 +1231,6 @@ function xmldb_game_upgrade($oldversion) {
         $table->add_field('printbutton', XMLDB_TYPE_INTEGER, '2', XMLDB_UNSIGNED, XMLDB_NOTNULL);
 
         $table->add_key('primary', XMLDB_KEY_PRIMARY, array('id'));
-        $table->add_key('gameid', XMLDB_INDEX_UNIQUE, array('gameid'));
 
         if (!$dbman->table_exists($table)) {
             $dbman->create_table($table);
