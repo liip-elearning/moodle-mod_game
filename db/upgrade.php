@@ -1182,7 +1182,7 @@ function xmldb_game_upgrade($oldversion) {
         $table = new xmldb_table('game_sudoku');
         $field = new xmldb_field('level', XMLDB_TYPE_INTEGER, '4', XMLDB_UNSIGNED, null, null, '0');
 
-        $dbman->cchange_field_precision($table, $field);
+        $dbman->change_field_precision($table, $field);
         upgrade_mod_savepoint(true, 2008101106, 'game');
     }
 
